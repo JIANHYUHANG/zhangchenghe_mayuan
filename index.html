@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="马克思主义基本原理宣传页：马克思主义的诞生与理论来源、三大组成部分、核心基本原理、中国化时代化及其当代价值。">
+<meta name="keywords" content="马克思主义基本原理,唯物辩证法,剩余价值,科学社会主义,马克思主义中国化">
+<title>马克思主义基本原理 · 真理之光</title>
+<style>
+/* ============ 基础重置 ============ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #f2e8d8;
+  background: #140406;
+  line-height: 1.9;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+img { border: 0; display: block; max-width: 100%; }
+a { text-decoration: none; color: inherit; }
+li { list-style: none; }
+
+/* 宋体/楷体标题栈：营造庄重的书卷气 */
+.serif { font-family: "Songti SC", "STSong", "SimSun", "Source Han Serif SC", "Noto Serif SC", Georgia, serif; }
+.kai   { font-family: "Kaiti SC", "STKaiti", "楷体", "KaiTi", "Songti SC", serif; }
+
+/* ============ 全局背景层 ============ */
+.bg-layer { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.bg-grad {
+  background:
+    radial-gradient(1100px 700px at 12% -6%, rgba(190, 42, 48, .40) 0%, rgba(190, 42, 48, 0) 62%),
+    radial-gradient(900px 640px at 96% 8%, rgba(212, 175, 55, .16) 0%, rgba(212, 175, 55, 0) 60%),
+    radial-gradient(1000px 800px at 78% 92%, rgba(150, 22, 32, .30) 0%, rgba(150, 22, 32, 0) 65%),
+    linear-gradient(180deg, #1b0508 0%, #140406 34%, #170508 62%, #100305 100%);
+}
+/* 宣纸／织纹肌理 */
+.bg-tex {
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255, 236, 200, .022) 0px, rgba(255, 236, 200, .022) 1px, transparent 1px, transparent 3px),
+    repeating-linear-gradient(90deg, rgba(255, 236, 200, .016) 0px, rgba(255, 236, 200, .016) 1px, transparent 1px, transparent 4px);
+  opacity: .9;
+}
+canvas#dust { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; pointer-events: none; }
+
+/* ============ 顶部进度条 ============ */
+#progress {
+  position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+  z-index: 99;
+  background: linear-gradient(90deg, #8c1119 0%, #c8102e 40%, #e6c46a 75%, #fff3c9 100%);
+  box-shadow: 0 0 14px rgba(230, 196, 106, .8);
+}
+
+/* ============ 版心 ============ */
+.wrap { position: relative; z-index: 2; width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 26px; }
+section { position: relative; z-index: 2; padding: 96px 0; }
+
+/* ============ 章节标题 ============ */
+.sec-head { position: relative; margin-bottom: 54px; }
+.sec-num {
+  position: absolute; right: 0; top: -46px;
+  font-size: 132px; line-height: 1;
+  font-weight: 700; letter-spacing: 2px;
+  color: rgba(230, 196, 106, .10);
+  font-family: Georgia, "Times New Roman", serif;
+  -webkit-user-select: none; user-select: none;
+}
+.sec-cn {
+  font-size: 34px; letter-spacing: 3px; font-weight: 700;
+  color: #fbf1dc;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, .55);
+}
+.sec-en {
+  display: block; margin-top: 8px;
+  font-size: 12px; letter-spacing: 4px; text-transform: uppercase;
+  color: rgba(230, 196, 106, .78);
+  font-family: Georgia, "Times New Roman", serif;
+}
+.sec-line {
+  width: 86px; height: 3px; margin: 20px 0 0;
+  background: linear-gradient(90deg, #e6c46a 0%, #c8102e 55%, rgba(200, 16, 46, 0) 100%);
+  border-radius: 2px;
+  box-shadow: 0 0 12px rgba(230, 196, 106, .55);
+}
+.sec-desc { margin-top: 20px; max-width: 760px; color: rgba(240, 228, 206, .74); font-size: 15.5px; }
+
+/* ============ 首屏 ============ */
+#hero { padding: 0; min-height: 100vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+#hero .wrap { padding-top: 110px; padding-bottom: 110px; }
+.hero-grid { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 0 -18px; }
+.hero-left { width: 58%; padding: 0 18px; }
+.hero-right { width: 42%; padding: 0 18px; }
+
+.badge {
+  display: inline-block; padding: 8px 18px; border-radius: 40px;
+  border: 1px solid rgba(230, 196, 106, .5);
+  background: rgba(230, 196, 106, .08);
+  font-size: 12.5px; letter-spacing: 3px; color: #f0dcae;
+}
+.hero-title {
+  font-size: 68px; line-height: 1.24; letter-spacing: 6px; font-weight: 700;
+  margin: 26px 0 0;
+  background: linear-gradient(180deg, #fffaf0 0%, #f6e3b6 42%, #e2b955 78%, #c8983a 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: #f3ddab;
+  text-shadow: none;
+  filter: drop-shadow(0 6px 26px rgba(0, 0, 0, .6));
+}
+.hero-sub {
+  margin-top: 18px; font-size: 18px; letter-spacing: 8px; color: rgba(232, 200, 128, .9);
+}
+.hero-rule { width: 100%; max-width: 420px; height: 1px; margin: 30px 0; background: linear-gradient(90deg, rgba(230, 196, 106, .85), rgba(230, 196, 106, 0)); }
+.hero-text { max-width: 560px; font-size: 16px; color: rgba(240, 228, 206, .82); }
+.hero-quote {
+  margin-top: 30px; padding: 18px 22px; border-left: 3px solid #c8102e;
+  background: linear-gradient(90deg, rgba(200, 16, 46, .16), rgba(200, 16, 46, 0));
+  border-radius: 0 12px 12px 0;
+}
+.hero-quote b { font-size: 21px; color: #ffdf8f; letter-spacing: 2px; }
+.hero-quote span { display: block; margin-top: 6px; font-size: 12.5px; letter-spacing: 2px; color: rgba(233, 214, 180, .68); }
+
+.hero-card {
+  position: relative; border-radius: 20px; overflow: hidden;
+  border: 1px solid rgba(230, 196, 106, .3);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, .6), inset 0 0 0 1px rgba(255, 255, 255, .04);
+  background: linear-gradient(140deg, #3a0f14, #1c0508);
+}
+.hero-card img { width: 100%; height: 460px; object-fit: cover; opacity: .92; }
+.hero-card .cap {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 46px 20px 16px;
+  font-size: 12.5px; letter-spacing: 3px; color: rgba(255, 240, 214, .9);
+  background: linear-gradient(0deg, rgba(12, 3, 5, .92), rgba(12, 3, 5, 0));
+}
+/* 印章 */
+.seal {
+  position: absolute; right: 22px; top: 22px; width: 74px; height: 74px;
+  border: 2px solid rgba(255, 232, 196, .82); border-radius: 8px;
+  background: rgba(178, 20, 32, .88);
+  color: #fff2de; text-align: center; font-size: 20px; line-height: 26px;
+  letter-spacing: 2px; padding: 8px 4px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, .5); opacity: .95;
+  -webkit-transform: rotate(-6deg); -ms-transform: rotate(-6deg); transform: rotate(-6deg);
+}
+
+/* 目录卡片 */
+.toc { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 58px -10px 0; }
+.toc-item {
+  width: 25%; padding: 0 10px; margin-bottom: 20px;
+}
+.toc-inner {
+  position: relative; overflow: hidden;
+  display: block; height: 100%; padding: 20px 18px; border-radius: 14px;
+  border: 1px solid rgba(230, 196, 106, .22);
+  background: rgba(255, 246, 230, .035);
+  transition: all .45s cubic-bezier(.2, .7, .3, 1);
+}
+.toc-inner::after {
+  content: ""; position: absolute; top: -60%; left: -70%; width: 60%; height: 220%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 244, 214, .13), rgba(255, 255, 255, 0));
+  -webkit-transform: skewX(-18deg); -ms-transform: skewX(-18deg); transform: skewX(-18deg);
+  -webkit-transition: left .8s ease; transition: left .8s ease;
+}
+.toc-inner:hover {
+  -webkit-transform: translateY(-6px); -ms-transform: translateY(-6px); transform: translateY(-6px);
+  border-color: rgba(230, 196, 106, .75);
+  background: rgba(230, 196, 106, .10);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, .5), 0 0 0 1px rgba(230, 196, 106, .18) inset;
+}
+.toc-k { font-size: 15.5px; color: #fbeecf; letter-spacing: 1.5px; }
+.toc-v { display: block; margin-top: 6px; font-size: 12px; letter-spacing: 1.5px; color: rgba(230, 196, 106, .68); font-family: Georgia, serif; }
+
+/* 滚动提示 */
+.scroll-hint { margin-top: 44px; font-size: 12px; letter-spacing: 4px; color: rgba(230, 196, 106, .7); }
+.scroll-hint i { display: inline-block; width: 1px; height: 34px; background: linear-gradient(180deg, rgba(230, 196, 106, .9), rgba(230, 196, 106, 0)); vertical-align: middle; margin-left: 10px; }
+
+/* ============ 数据带 ============ */
+.stats { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 0 -12px; }
+.stat {
+  width: 25%; padding: 0 12px;
+}
+.stat-in {
+  padding: 26px 20px; border-radius: 16px; height: 100%;
+  background: linear-gradient(160deg, rgba(255, 246, 230, .055), rgba(255, 246, 230, .012));
+  border: 1px solid rgba(230, 196, 106, .18);
+  border-top: 2px solid rgba(200, 16, 46, .8);
+}
+.stat-n { font-size: 40px; font-weight: 700; font-family: Georgia, serif; color: #f4dc9d; line-height: 1.2; }
+.stat-n em { font-size: 16px; font-style: normal; color: rgba(230, 196, 106, .8); margin-left: 4px; }
+.stat-t { font-size: 13.5px; color: rgba(240, 228, 206, .72); margin-top: 6px; letter-spacing: 1px; }
+
+/* ============ 口号走马灯 ============ */
+.marquee {
+  position: relative; overflow: hidden; padding: 16px 0; margin: 0 0 6px;
+  border-top: 1px solid rgba(230, 196, 106, .22);
+  border-bottom: 1px solid rgba(230, 196, 106, .22);
+  background: rgba(200, 16, 46, .08);
+}
+.marquee-inner {
+  display: inline-block; white-space: nowrap;
+  -webkit-animation: roll 26s linear infinite; animation: roll 26s linear infinite;
+}
+.marquee span {
+  display: inline-block; padding: 0 34px; font-size: 15px; letter-spacing: 6px;
+  color: #f0dcae;
+}
+.marquee span::after { content: "★"; color: rgba(200, 16, 46, .9); margin-left: 34px; font-size: 11px; }
+@-webkit-keyframes roll { from { -webkit-transform: translateX(0); } to { -webkit-transform: translateX(-50%); } }
+@keyframes roll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ============ 通用卡片 ============ */
+.cards { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 0 -14px; }
+.card {
+  width: 33.3333%; padding: 0 14px; margin-bottom: 28px;
+}
+.card-in {
+  position: relative; overflow: hidden; height: 100%;
+  padding: 32px 26px 30px; border-radius: 18px;
+  background: linear-gradient(165deg, rgba(255, 246, 230, .06), rgba(255, 246, 230, .012));
+  border: 1px solid rgba(230, 196, 106, .2);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .38);
+  transition: all .5s cubic-bezier(.2, .7, .3, 1);
+}
+.card-in::before {
+  content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 3px;
+  background: linear-gradient(90deg, #c8102e, #e6c46a);
+  opacity: .85;
+}
+.card-in::after {
+  content: ""; position: absolute; top: -60%; left: -70%; width: 60%; height: 220%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 244, 214, .13), rgba(255, 255, 255, 0));
+  -webkit-transform: skewX(-18deg); -ms-transform: skewX(-18deg); transform: skewX(-18deg);
+  -webkit-transition: left .8s ease; transition: left .8s ease;
+}
+.card-in:hover::after, .toc-inner:hover::after { left: 130%; }
+.card-in:hover {
+  -webkit-transform: translateY(-9px); -ms-transform: translateY(-9px); transform: translateY(-9px);
+  border-color: rgba(230, 196, 106, .7);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, .58), 0 0 0 1px rgba(230, 196, 106, .16) inset, 0 0 42px rgba(200, 16, 46, .28);
+}
+.card-ico { width: 54px; height: 54px; margin-bottom: 18px; }
+.card-tt { font-size: 20px; letter-spacing: 2px; color: #fdf3dd; }
+.card-en { display: block; font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(230, 196, 106, .62); font-family: Georgia, serif; margin-top: 6px; }
+.card-tx { margin-top: 16px; font-size: 14.6px; color: rgba(238, 226, 204, .78); }
+.card-tx b { color: #ffdc92; font-weight: 600; }
+.card-bd { margin-top: 18px; padding-top: 16px; border-top: 1px dashed rgba(230, 196, 106, .22); }
+.chips { margin-top: 14px; }
+.chip {
+  display: inline-block; margin: 0 8px 8px 0; padding: 4px 12px; border-radius: 30px;
+  font-size: 12px; color: #f2dcae; background: rgba(200, 16, 46, .18);
+  border: 1px solid rgba(230, 196, 106, .28);
+}
+
+/* ============ 时间轴 ============ */
+.tl { position: relative; padding: 10px 0 0; }
+.tl::before {
+  content: ""; position: absolute; left: 50%; top: 0; width: 2px; height: 100%;
+  margin-left: -1px;
+  background: linear-gradient(180deg, rgba(230, 196, 106, 0), rgba(230, 196, 106, .75) 12%, rgba(200, 16, 46, .8) 88%, rgba(230, 196, 106, 0));
+}
+.tl-item { position: relative; width: 50%; padding: 0 44px 40px 0; }
+.tl-item:nth-child(even) { margin-left: 50%; padding: 0 0 40px 44px; }
+.tl-dot {
+  position: absolute; right: -9px; top: 16px; width: 16px; height: 16px; border-radius: 50%;
+  background: #c8102e; border: 2px solid #f0dcae;
+  box-shadow: 0 0 0 5px rgba(200, 16, 46, .18), 0 0 20px rgba(230, 196, 106, .8);
+}
+.tl-item:nth-child(even) .tl-dot { right: auto; left: -9px; }
+.tl-box {
+  padding: 22px 24px; border-radius: 16px;
+  background: rgba(255, 246, 230, .04);
+  border: 1px solid rgba(230, 196, 106, .2);
+  transition: all .45s ease;
+}
+.tl-box:hover { background: rgba(230, 196, 106, .09); border-color: rgba(230, 196, 106, .6); }
+.tl-year { font-family: Georgia, serif; font-size: 22px; color: #f2d791; letter-spacing: 1px; }
+.tl-tt { font-size: 16.5px; color: #fdf3dd; margin-top: 4px; }
+.tl-tx { font-size: 14px; color: rgba(238, 226, 204, .74); margin-top: 8px; }
+
+/* ============ 图文并排 ============ */
+.split { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin: 0 -20px; }
+.split-txt { width: 54%; padding: 0 20px; }
+.split-img { width: 46%; padding: 0 20px; }
+.frame {
+  position: relative; border-radius: 18px; overflow: hidden;
+  border: 1px solid rgba(230, 196, 106, .3);
+  box-shadow: 0 24px 58px rgba(0, 0, 0, .55);
+  background: linear-gradient(140deg, #3a0f14, #1c0508);
+}
+.frame img { width: 100%; height: 330px; object-fit: cover; opacity: .95; }
+.frame-tag {
+  position: absolute; left: 16px; bottom: 14px; padding: 6px 14px; border-radius: 30px;
+  font-size: 12px; letter-spacing: 2px; color: #ffeec9;
+  background: rgba(20, 6, 8, .72); border: 1px solid rgba(230, 196, 106, .38);
+}
+.plist li {
+  position: relative; padding-left: 30px; margin-bottom: 14px; font-size: 14.8px; color: rgba(238, 226, 204, .8);
+}
+.plist li::before {
+  content: ""; position: absolute; left: 6px; top: 11px; width: 7px; height: 7px;
+  background: #e6c46a; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);
+  box-shadow: 0 0 10px rgba(230, 196, 106, .9);
+}
+.plist li b { color: #ffdd95; }
+
+/* ============ 图说（SVG 图解） ============ */
+.diagrams { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 10px -14px 0; }
+.dg { width: 33.3333%; padding: 0 14px; margin-bottom: 28px; }
+.dg-in {
+  height: 100%; padding: 24px 20px; border-radius: 18px; text-align: center;
+  background: rgba(255, 246, 230, .035);
+  border: 1px solid rgba(230, 196, 106, .18);
+  transition: all .45s ease;
+}
+.dg-in:hover { -webkit-transform: translateY(-7px); -ms-transform: translateY(-7px); transform: translateY(-7px); border-color: rgba(230, 196, 106, .62); background: rgba(230, 196, 106, .08); }
+.dg-svg { width: 100%; max-width: 230px; margin: 0 auto; display: block; }
+.dg-t { margin-top: 14px; font-size: 16px; color: #fdf3dd; letter-spacing: 1.5px; }
+.dg-x { margin-top: 8px; font-size: 13.5px; color: rgba(238, 226, 204, .72); text-align: left; }
+
+/* ============ 原理条目 ============ */
+.principles { margin-top: 8px; counter-reset: p; }
+.pr {
+  position: relative; padding: 26px 28px 26px 86px; margin-bottom: 18px; border-radius: 16px;
+  background: linear-gradient(100deg, rgba(255, 246, 230, .05), rgba(255, 246, 230, .012));
+  border: 1px solid rgba(230, 196, 106, .16);
+  transition: all .45s ease;
+}
+.pr:hover { border-color: rgba(230, 196, 106, .58); background: linear-gradient(100deg, rgba(230, 196, 106, .10), rgba(255, 246, 230, .02)); -webkit-transform: translateX(6px); -ms-transform: translateX(6px); transform: translateX(6px); }
+.pr-idx {
+  position: absolute; left: 24px; top: 24px; width: 44px; height: 44px; line-height: 42px; text-align: center;
+  border-radius: 50%; font-family: Georgia, serif; font-size: 19px; color: #ffdf95;
+  border: 1px solid rgba(230, 196, 106, .5); background: rgba(200, 16, 46, .22);
+}
+.pr-tt { font-size: 19px; color: #fdf3dd; letter-spacing: 1.5px; }
+.pr-tx { margin-top: 10px; font-size: 14.6px; color: rgba(238, 226, 204, .78); }
+.pr-tx em { font-style: normal; color: #ffdc92; }
+
+/* ============ 名句墙 ============ */
+.quotes { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; margin: 0 -14px; }
+.q { width: 50%; padding: 0 14px; margin-bottom: 26px; }
+.q-in {
+  position: relative; height: 100%; padding: 34px 30px 28px; border-radius: 18px;
+  border: 1px solid rgba(230, 196, 106, .22);
+  background: linear-gradient(150deg, rgba(200, 16, 46, .16), rgba(255, 246, 230, .02));
+  overflow: hidden;
+}
+.q-mark {
+  position: absolute; right: 18px; top: 4px; font-family: Georgia, serif; font-size: 110px; line-height: 1;
+  color: rgba(230, 196, 106, .14);
+}
+.q-tx { position: relative; font-size: 19px; line-height: 1.85; color: #fbeecd; letter-spacing: 1px; }
+.q-src { display: block; margin-top: 14px; font-size: 12.5px; letter-spacing: 2px; color: rgba(230, 196, 106, .78); }
+
+/* ============ 结语 / 印章区 ============ */
+.closing {
+  margin-top: 20px; padding: 46px 40px; border-radius: 20px; text-align: center;
+  background:
+    radial-gradient(600px 300px at 50% 0%, rgba(200, 16, 46, .28), rgba(200, 16, 46, 0) 70%),
+    linear-gradient(160deg, rgba(255, 246, 230, .07), rgba(255, 246, 230, .015));
+  border: 1px solid rgba(230, 196, 106, .28);
+}
+.closing h3 { font-size: 28px; letter-spacing: 5px; color: #fbeecd; }
+.closing p { max-width: 720px; margin: 16px auto 0; font-size: 15.5px; color: rgba(238, 226, 204, .8); }
+.big-seal {
+  width: 118px; height: 118px; margin: 30px auto 0; border-radius: 12px;
+  border: 3px solid rgba(255, 238, 210, .8);
+  background: rgba(178, 20, 32, .9);
+  color: #fff4e2; font-size: 27px; line-height: 36px; letter-spacing: 4px;
+  padding: 12px 6px; box-shadow: 0 12px 34px rgba(0, 0, 0, .5);
+  -webkit-transform: rotate(-5deg); -ms-transform: rotate(-5deg); transform: rotate(-5deg);
+}
+
+/* ============ 页脚 ============ */
+footer {
+  position: relative; z-index: 2; margin-top: 40px; padding: 40px 0;
+  border-top: 1px solid rgba(230, 196, 106, .18);
+  text-align: center; font-size: 13px; color: rgba(232, 214, 180, .56); letter-spacing: 1.5px;
+}
+footer b { color: rgba(230, 196, 106, .8); }
+
+/* ============ 回到顶部 ============ */
+#toTop {
+  position: fixed; right: 26px; bottom: 26px; z-index: 60;
+  width: 46px; height: 46px; border-radius: 50%; cursor: pointer;
+  border: 1px solid rgba(230, 196, 106, .55);
+  background: rgba(28, 6, 10, .82);
+  color: #f0dcae; font-size: 17px; line-height: 44px; text-align: center;
+  opacity: 0; visibility: hidden;
+  -webkit-transition: all .4s ease; transition: all .4s ease;
+}
+#toTop.on { opacity: 1; visibility: visible; }
+#toTop:hover { background: rgba(200, 16, 46, .85); box-shadow: 0 0 22px rgba(230, 196, 106, .6); }
+
+/* ============ 滚动入场动画 ============ */
+.rv {
+  opacity: 0;
+  -webkit-transform: translateY(34px); -ms-transform: translateY(34px); transform: translateY(34px);
+  -webkit-transition: opacity .9s cubic-bezier(.2, .7, .3, 1), -webkit-transform .9s cubic-bezier(.2, .7, .3, 1);
+  transition: opacity .9s cubic-bezier(.2, .7, .3, 1), transform .9s cubic-bezier(.2, .7, .3, 1);
+}
+.rv.on { opacity: 1; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
+.no-anim .rv { opacity: 1; -webkit-transform: none; -ms-transform: none; transform: none; }
+
+/* ============ 响应式 ============ */
+@media screen and (max-width: 1080px) {
+  .hero-title { font-size: 54px; letter-spacing: 4px; }
+  .sec-num { font-size: 104px; top: -34px; }
+  .toc-item, .stat { width: 50%; }
+  .card, .dg { width: 50%; }
+  .hero-left, .hero-right { width: 100%; }
+  .hero-right { margin-top: 42px; }
+  .hero-card img { height: 380px; }
+  .split-txt, .split-img { width: 100%; }
+  .split-img { margin-top: 30px; }
+}
+@media screen and (max-width: 760px) {
+  section { padding: 68px 0; }
+  #hero .wrap { padding-top: 84px; padding-bottom: 70px; }
+  .hero-title { font-size: 36px; letter-spacing: 3px; }
+  .hero-sub { font-size: 14px; letter-spacing: 4px; }
+  .sec-cn { font-size: 25px; letter-spacing: 2px; }
+  .sec-num { font-size: 76px; top: -22px; opacity: .8; }
+  .toc-item, .stat, .card, .dg, .q { width: 100%; }
+  .tl::before { left: 7px; }
+  .tl-item, .tl-item:nth-child(even) { width: 100%; margin-left: 0; padding: 0 0 30px 34px; }
+  .tl-item .tl-dot, .tl-item:nth-child(even) .tl-dot { left: -1px; right: auto; }
+  .pr { padding: 24px 20px 24px 20px; }
+  .pr-idx { position: static; display: inline-block; margin-bottom: 12px; }
+  .pr:hover { -webkit-transform: none; -ms-transform: none; transform: none; }
+  .closing { padding: 34px 22px; }
+  .closing h3 { font-size: 22px; letter-spacing: 3px; }
+  .q-tx { font-size: 16.5px; }
+  #toTop { right: 16px; bottom: 16px; }
+}
+@media print {
+  body { background: #fff; color: #222; }
+  .bg-layer, canvas#dust, #progress, #toTop, .marquee { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- 背景层 -->
+<div class="bg-layer bg-grad"></div>
+<div class="bg-layer bg-tex"></div>
+<canvas id="dust"></canvas>
+<div id="progress"></div>
+
+<!-- ================= 首屏 ================= -->
+<section id="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-left">
+        <span class="badge">马克思主义基本原理 · 宣传专题</span>
+        <h1 class="hero-title serif">真理之光<br>马克思主义基本原理</h1>
+        <p class="hero-sub kai">科学的世界观 · 正确的方法论 · 行动的指南针</p>
+        <div class="hero-rule"></div>
+        <p class="hero-text">
+          马克思主义是由马克思、恩格斯创立并为后继者不断发展的科学理论体系，是关于自然、社会和人类思维发展一般规律的科学，
+          是关于<b>社会主义必然代替资本主义、最终实现共产主义</b>的科学。它不是僵死的教条，而是<em>行动的指南</em>——
+          一个开放、发展、与时俱进的理论体系。
+        </p>
+        <div class="hero-quote">
+          <b class="serif">“ 全世界无产者，联合起来！ ”</b>
+          <span>—— 马克思、恩格斯《共产党宣言》· 1848年</span>
+        </div>
+
+        <div class="toc">
+          <div class="toc-item"><a class="toc-inner" href="#sec1"><span class="toc-k">壹 · 诞生与来源</span><span class="toc-v">ORIGIN</span></a></div>
+          <div class="toc-item"><a class="toc-inner" href="#sec2"><span class="toc-k">贰 · 三大组成部分</span><span class="toc-v">STRUCTURE</span></a></div>
+          <div class="toc-item"><a class="toc-inner" href="#sec3"><span class="toc-k">叁 · 核心基本原理</span><span class="toc-v">PRINCIPLES</span></a></div>
+          <div class="toc-item"><a class="toc-inner" href="#sec4"><span class="toc-k">肆 · 中国化时代化</span><span class="toc-v">SINICIZATION</span></a></div>
+        </div>
+        <div class="scroll-hint">向下滚动，走进真理的世界 <i></i></div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="seal kai">真理<br>之光</div>
+          <img src="images/hero-truth.jpg" data-fb="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=%E5%AE%8F%E5%A4%A7%E5%BA%84%E4%B8%A5%E7%9A%84%E7%BA%A2%E8%89%B2%E4%B8%BB%E9%A2%98%E6%8A%BD%E8%B1%A1%E7%94%BB%EF%BC%8C%E9%A3%98%E6%89%AC%E7%9A%84%E7%BA%A2%E6%97%97%EF%BC%8C%E9%87%91%E8%89%B2%E5%85%89%E7%B2%92%E5%AD%90%EF%BC%8C%E6%B0%B4%E5%A2%A8%E7%BE%A4%E5%B1%B1%EF%BC%8C%E6%B7%B1%E9%82%83%E6%9A%97%E7%BA%A2%E6%B8%90%E5%8F%98%E8%83%8C%E6%99%AF%EF%BC%8C%E5%8F%B2%E8%AF%97%E6%84%9F%EF%BC%8C%E7%94%B5%E5%BD%B1%E7%BA%A7%E5%85%89%E5%BD%B1%EF%BC%8C%E6%97%A0%E6%96%87%E5%AD%97&image_size=portrait_16_9" alt="红旗与真理之光" onerror="this.getAttribute('data-done')?this.style.display='none':(this.setAttribute('data-done','1'),this.src=this.getAttribute('data-fb'))">
+          <span class="cap">《共产党宣言》诞生以来，马克思主义照亮了人类解放的道路</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 口号走马灯 -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-inner" id="mq">
+    <span>实践是检验真理的唯一标准</span><span>哲学家们只是用不同的方式解释世界，而问题在于改变世界</span>
+    <span>人民群众是历史的创造者</span><span>理论只要彻底，就能说服人</span>
+  </div>
+</div>
+
+<!-- ================= 壹 · 诞生与理论来源 ================= -->
+<section id="sec1">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">01</span>
+      <h2 class="sec-cn serif">马克思主义的诞生与理论来源</h2>
+      <span class="sec-en">Origin &amp; Theoretical Sources</span>
+      <div class="sec-line"></div>
+      <p class="sec-desc">
+        19世纪40年代，资本主义在西欧迅速发展，无产阶级作为独立的政治力量登上历史舞台。
+        马克思、恩格斯批判地继承了人类优秀思想成果，完成了从唯心主义到唯物主义、从革命民主主义到共产主义的转变，
+        创立了以<b>马克思</b>名字命名的科学理论体系。
+      </p>
+    </div>
+
+    <div class="stats rv">
+      <div class="stat"><div class="stat-in"><div class="stat-n" data-num="1848" data-suf="<em>年</em>">1848<em>年</em></div><div class="stat-t">《共产党宣言》发表，标志马克思主义公开问世</div></div></div>
+      <div class="stat"><div class="stat-in"><div class="stat-n" data-num="1867" data-suf="<em>年</em>">1867<em>年</em></div><div class="stat-t">《资本论》第一卷出版，剩余价值学说创立</div></div></div>
+      <div class="stat"><div class="stat-in"><div class="stat-n" data-num="3" data-suf="<em>大来源</em>">3<em>大来源</em></div><div class="stat-t">德国古典哲学 · 英国古典政治经济学 · 空想社会主义</div></div></div>
+      <div class="stat"><div class="stat-in"><div class="stat-n" data-num="3" data-suf="<em>大组成</em>">3<em>大组成</em></div><div class="stat-t">哲学 · 政治经济学 · 科学社会主义</div></div></div>
+    </div>
+
+    <div class="split rv" style="margin-top:56px;">
+      <div class="split-img">
+        <div class="frame">
+          <img src="images/marx-statue.jpg" data-fb="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=%E5%86%99%E5%AE%9E%E5%8F%A4%E5%85%B8%E6%B2%B9%E7%94%BB%E8%B4%A8%E6%84%9F%E7%9A%84%E5%8D%A1%E5%B0%94%C2%B7%E9%A9%AC%E5%85%8B%E6%80%9D%E5%8D%8A%E8%BA%AB%E9%9B%95%E5%83%8F%EF%BC%8C%E6%B7%B1%E8%89%B2%E8%83%8C%E6%99%AF%EF%BC%8C%E6%9A%96%E9%87%91%E8%89%B2%E4%BE%A7%E5%85%89%EF%BC%8C%E5%BA%84%E4%B8%A5%E6%B2%89%E6%80%9D%EF%BC%8C%E7%94%B5%E5%BD%B1%E7%BA%A7%E5%85%89%E5%BD%B1%EF%BC%8C%E6%97%A0%E6%96%87%E5%AD%97&image_size=portrait_4_3" alt="马克思雕像" onerror="this.getAttribute('data-done')?this.style.display='none':(this.setAttribute('data-done','1'),this.src=this.getAttribute('data-fb'))">
+          <span class="frame-tag">卡尔·马克思 1818—1883</span>
+        </div>
+      </div>
+      <div class="split-txt">
+        <h3 class="serif" style="font-size:22px;color:#fdf3dd;letter-spacing:2px;">直接理论来源</h3>
+        <ul class="plist" style="margin-top:18px;">
+          <li><b>德国古典哲学</b>——批判吸收黑格尔的辩证法"合理内核"与费尔巴哈唯物主义的"基本内核"，创立辩证唯物主义与历史唯物主义。</li>
+          <li><b>英国古典政治经济学</b>——批判吸收亚当·斯密、大卫·李嘉图的劳动价值论，创立剩余价值学说。</li>
+          <li><b>英法空想社会主义</b>——批判吸收圣西门、傅立叶、欧文对资本主义的揭露与对未来社会的设想，使社会主义从空想变为科学。</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">唯物史观</span><span class="chip">剩余价值学说</span><span class="chip">科学社会主义</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl rv" style="margin-top:64px;">
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-box"><div class="tl-year">1848</div><div class="tl-tt">《共产党宣言》发表</div>
+          <p class="tl-tx">系统阐述科学社会主义基本原理，"让统治阶级在共产主义革命面前发抖吧"，标志马克思主义的公开问世。</p></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-box"><div class="tl-year">1867</div><div class="tl-tt">《资本论》第一卷出版</div>
+          <p class="tl-tx">揭示资本主义生产方式的运动规律，剩余价值学说成为马克思一生的两大发现之一。</p></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-box"><div class="tl-year">1883</div><div class="tl-tt">马克思逝世</div>
+          <p class="tl-tx">恩格斯在墓前指出："他的英名和事业将永垂不朽。"马克思主义在工人运动中广泛传播。</p></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-box"><div class="tl-year">1917</div><div class="tl-tt">十月革命胜利</div>
+          <p class="tl-tx">列宁把马克思主义基本原理与俄国实际结合，实现社会主义从理论到现实的伟大飞跃。</p></div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot"></span>
+        <div class="tl-box"><div class="tl-year">1919 / 1921</div><div class="tl-tt">五四运动与中国共产党成立</div>
+          <p class="tl-tx">马克思主义传入中国并同中国工人运动相结合，中国革命的面貌从此焕然一新。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 贰 · 三大组成部分 ================= -->
+<section id="sec2">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">02</span>
+      <h2 class="sec-cn serif">马克思主义的三大组成部分</h2>
+      <span class="sec-en">Three Components of Marxism</span>
+      <div class="sec-line"></div>
+      <p class="sec-desc">马克思主义是<b>哲学、政治经济学和科学社会主义</b>三个主要部分构成的严密整体：哲学提供世界观和方法论，政治经济学揭示资本主义的内在矛盾，科学社会主义指明社会发展方向，三者互为前提、互相支撑。</p>
+    </div>
+
+    <div class="cards rv">
+      <div class="card"><div class="card-in">
+        <svg class="card-ico" viewBox="0 0 64 64" fill="none" stroke="#e6c46a" stroke-width="2">
+          <circle cx="32" cy="32" r="20"/><path d="M32 12v40M12 32h40" stroke-width="1.4" opacity=".6"/>
+          <path d="M22 42c4-12 12-18 20-20" stroke="#c8102e" stroke-width="2.4"/>
+          <circle cx="32" cy="32" r="3" fill="#e6c46a" stroke="none"/>
+        </svg>
+        <h3 class="card-tt serif">马克思主义哲学</h3><span class="card-en">Philosophy</span>
+        <p class="card-tx">辩证唯物主义与历史唯物主义，是马克思主义的<b>理论基础</b>。它揭示了世界的物质性、事物的联系与发展、矛盾运动的规律，以及社会历史发展的基本规律。</p>
+        <div class="card-bd chips"><span class="chip">唯物论</span><span class="chip">辩证法</span><span class="chip">认识论</span><span class="chip">唯物史观</span></div>
+      </div></div>
+
+      <div class="card"><div class="card-in">
+        <svg class="card-ico" viewBox="0 0 64 64" fill="none" stroke="#e6c46a" stroke-width="2">
+          <rect x="12" y="34" width="40" height="18" rx="3"/>
+          <path d="M32 34V18M22 24c4-6 16-6 20 0" stroke="#c8102e" stroke-width="2.4"/>
+          <path d="M18 42h28M18 46h18" opacity=".6"/>
+        </svg>
+        <h3 class="card-tt serif">马克思主义政治经济学</h3><span class="card-en">Political Economy</span>
+        <p class="card-tx">以<b>剩余价值学说</b>为核心内容，研究资本主义生产方式的内在矛盾与运动规律，揭示资本家剥削工人的秘密，论证资本主义被社会主义代替的历史必然性。</p>
+        <div class="card-bd chips"><span class="chip">商品二因素</span><span class="chip">价值规律</span><span class="chip">剩余价值</span><span class="chip">资本积累</span></div>
+      </div></div>
+
+      <div class="card"><div class="card-in">
+        <svg class="card-ico" viewBox="0 0 64 64" fill="none" stroke="#e6c46a" stroke-width="2">
+          <path d="M32 10l3.6 9.4 10-.6-6.6 7.6 4.6 8.9-9.6-3-6.4 7.7-1.2-9.8-9.8-2 8.4-5.6z" fill="rgba(230,196,106,.18)"/>
+          <path d="M18 44c6 6 28 6 28-4" stroke="#c8102e" stroke-width="2.4"/>
+          <path d="M32 52v4" stroke-width="1.4" opacity=".6"/>
+        </svg>
+        <h3 class="card-tt serif">科学社会主义</h3><span class="card-en">Scientific Socialism</span>
+        <p class="card-tx">马克思主义的<b>核心与归宿</b>。它阐明社会主义代替资本主义的历史必然性，指明无产阶级的历史使命与实现道路，描绘共产主义社会的美好图景。</p>
+        <div class="card-bd chips"><span class="chip">阶级与国家</span><span class="chip">无产阶级专政</span><span class="chip">共产主义</span></div>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 叁 · 核心基本原理 ================= -->
+<section id="sec3">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">03</span>
+      <h2 class="sec-cn serif">马克思主义的核心基本原理</h2>
+      <span class="sec-en">Fundamental Principles</span>
+      <div class="sec-line"></div>
+      <p class="sec-desc">从世界观到方法论，从社会历史观到资本主义批判，以下十一条原理构成马克思主义基本原理的骨干。</p>
+    </div>
+
+    <!-- 图解三则 -->
+    <div class="diagrams rv">
+      <div class="dg"><div class="dg-in">
+        <svg class="dg-svg" viewBox="0 0 220 150" fill="none">
+          <circle cx="82" cy="72" r="46" stroke="#c8102e" stroke-width="2" fill="rgba(200,16,46,.12)"/>
+          <circle cx="138" cy="72" r="46" stroke="#e6c46a" stroke-width="2" fill="rgba(230,196,106,.10)"/>
+          <text x="58" y="76" fill="#ffc9c9" font-size="13" text-anchor="middle">矛盾</text>
+          <text x="58" y="94" fill="#ffc9c9" font-size="13" text-anchor="middle">一方</text>
+          <text x="162" y="76" fill="#f4dc9d" font-size="13" text-anchor="middle">矛盾</text>
+          <text x="162" y="94" fill="#f4dc9d" font-size="13" text-anchor="middle">另一方</text>
+          <path d="M88 44h44" stroke="#fff3c9" stroke-width="1.6" marker-end="url(#a1)"/>
+          <path d="M132 100H88" stroke="#fff3c9" stroke-width="1.6" marker-end="url(#a1)"/>
+          <text x="110" y="32" fill="#e8d6a8" font-size="11" text-anchor="middle">相互依存</text>
+          <text x="110" y="120" fill="#e8d6a8" font-size="11" text-anchor="middle">相互转化</text>
+          <defs><marker id="a1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0 0l6 3-6 3z" fill="#fff3c9"/></marker></defs>
+        </svg>
+        <div class="dg-t serif">对立统一规律</div>
+        <p class="dg-x">矛盾即对立统一，是事物发展的根本动力；矛盾双方相互依存、相互贯通，并在一定条件下相互转化。它是唯物辩证法的实质与核心。</p>
+      </div></div>
+
+      <div class="dg"><div class="dg-in">
+        <svg class="dg-svg" viewBox="0 0 220 150" fill="none">
+          <path d="M14 132h192" stroke="rgba(230,196,106,.5)" stroke-width="1.4"/>
+          <path d="M20 132v-14h34v-14h34v-14h34v-14h34" stroke="#c8102e" stroke-width="2.4" fill="none"/>
+          <path d="M156 76l16-20 16 20" stroke="#e6c46a" stroke-width="2.6" fill="none"/>
+          <path d="M172 56V20" stroke="#e6c46a" stroke-width="2.6" stroke-dasharray="5 5"/>
+          <circle cx="172" cy="18" r="5" fill="#e6c46a"/>
+          <text x="52" y="112" fill="#e8d6a8" font-size="12">量变积累</text>
+          <text x="140" y="42" fill="#f4dc9d" font-size="12">质变飞跃</text>
+        </svg>
+        <div class="dg-t serif">质量互变规律</div>
+        <p class="dg-x">量变是质变的必要准备，质变是量变的必然结果；量变到一定程度必然引起质变，质变又为新的量变开辟道路。</p>
+      </div></div>
+
+      <div class="dg"><div class="dg-in">
+        <svg class="dg-svg" viewBox="0 0 220 150" fill="none">
+          <path d="M110 140 C 40 140, 20 110, 40 84 C 60 58, 120 60, 132 40 C 142 24, 118 16, 104 24"
+                stroke="#e6c46a" stroke-width="2.4" fill="none"/>
+          <path d="M110 140 C 180 140, 200 110, 180 84 C 160 58, 100 60, 88 40 C 78 24, 102 14, 118 22"
+                stroke="rgba(200,16,46,.85)" stroke-width="2.4" fill="none"/>
+          <circle cx="110" cy="140" r="4" fill="#fff3c9"/>
+          <path d="M100 22l14-16 6 12z" fill="#e6c46a"/>
+          <text x="44" y="128" fill="#e8d6a8" font-size="11">起点</text>
+          <text x="152" y="132" fill="#e8d6a8" font-size="11">曲折</text>
+          <text x="126" y="14" fill="#f4dc9d" font-size="11">上升</text>
+        </svg>
+        <div class="dg-t serif">否定之否定规律</div>
+        <p class="dg-x">事物发展经过"肯定—否定—否定之否定"的过程，呈现螺旋式上升、波浪式前进，是前进性与曲折性的统一。</p>
+      </div></div>
+    </div>
+
+    <div class="principles rv">
+      <div class="pr"><span class="pr-idx">01</span>
+        <h3 class="pr-tt serif">物质与意识：世界统一于物质</h3>
+        <p class="pr-tx">物质是不依赖于人的意识并能为人的意识所反映的客观实在。<em>物质决定意识，意识是物质的产物</em>；同时意识具有能动作用，能够反映世界并指导实践改造世界。这一原理要求我们坚持<em>一切从实际出发、实事求是</em>，反对主观主义。</p>
+      </div>
+      <div class="pr"><span class="pr-idx">02</span>
+        <h3 class="pr-tt serif">唯物辩证法的总特征：联系与发展</h3>
+        <p class="pr-tx">世界是普遍联系的整体，也是永恒发展的过程。联系具有客观性、普遍性、多样性；发展是前进的、上升的运动，其实质是<em>新事物的产生与旧事物的灭亡</em>。要求我们用联系、发展、全面的观点看问题。</p>
+      </div>
+      <div class="pr"><span class="pr-idx">03</span>
+        <h3 class="pr-tt serif">对立统一规律：事物发展的根本动力</h3>
+        <p class="pr-tx">矛盾具有<em>普遍性</em>（事事有矛盾、时时有矛盾）与<em>特殊性</em>（具体事物的矛盾各有特点），二者相互联结，要求坚持"共性个性、绝对相对"的道理，做到<em>具体问题具体分析</em>。在复杂事物中要区分主要矛盾与次要矛盾、矛盾的主要方面与次要方面，坚持两点论与重点论的统一。</p>
+      </div>
+      <div class="pr"><span class="pr-idx">04</span>
+        <h3 class="pr-tt serif">质量互变与否定之否定：发展的形式与道路</h3>
+        <p class="pr-tx">量变积累到一定程度引起质变，质变又引起新的量变；事物经过两次否定、三个阶段，实现<em>螺旋式上升</em>。这要求我们既重视量的积累、脚踏实地，又抓住时机促成飞跃，同时做好应对曲折的准备。</p>
+      </div>
+      <div class="pr"><span class="pr-idx">05</span>
+        <h3 class="pr-tt serif">实践与认识的辩证关系</h3>
+        <p class="pr-tx">实践是认识的来源、动力、目的和检验真理的唯一标准；认识对实践具有能动的反作用。认识运动的总规律是<em>实践—认识—再实践—再认识</em>，循环往复以至无穷，每一循环都进入更高程度。真理是客观的，是绝对性与相对性的统一，是<em>具体的、有条件的</em>。</p>
+      </div>
+      <div class="pr"><span class="pr-idx">06</span>
+        <h3 class="pr-tt serif">社会存在与社会意识</h3>
+        <p class="pr-tx">社会存在决定社会意识，社会意识是社会存在的反映；社会意识又具有<em>相对独立性</em>，可以超前或滞后于社会存在，并对社会存在发生反作用。这要求我们重视意识形态工作，坚持以先进文化引领社会风尚。</p>
+      </div>
+      <div class="pr"><span class="pr-idx">07</span>
+        <h3 class="pr-tt serif">社会基本矛盾：社会发展的根本动力</h3>
+        <p class="pr-tx">生产力与生产关系的矛盾、经济基础与上层建筑的矛盾，是社会基本矛盾。其中<em>生产力决定生产关系，生产关系反作用于生产力；经济基础决定上层建筑，上层建筑反作用于经济基础</em>。生产关系一定要适合生产力状况、上层建筑一定要适合经济基础状况，是社会发展的基本规律。</p>
+      </div>
+      <div class="pr"><span class="pr-idx">08</span>
+        <h3 class="pr-tt serif">人民群众是历史的创造者</h3>
+        <p class="pr-tx">人民群众是社会物质财富和精神财富的创造者，是社会变革的决定力量。同时要正确认识杰出人物在历史上的重要作用。这一原理要求坚持<em>以人民为中心</em>，一切为了人民、一切依靠人民。</p>
+      </div>
+      <div class="pr"><span class="pr-idx">09</span>
+        <h3 class="pr-tt serif">商品经济与价值规律</h3>
+        <p class="pr-tx">商品是使用价值与价值的统一体，生产商品的劳动具有具体劳动与抽象劳动二重性。价值规律即<em>商品的价值量由社会必要劳动时间决定，商品交换以价值量为基础实行等价交换</em>，是商品经济的基本规律，其作用表现为自发调节资源配置、刺激技术进步，同时可能造成资源浪费与两极分化。</p>
+      </div>
+      <div class="pr"><span class="pr-idx">10</span>
+        <h3 class="pr-tt serif">剩余价值理论与资本积累</h3>
+        <p class="pr-tx">劳动力成为商品是剩余价值生产的前提。资本家通过延长工作日或提高劳动生产率，占有工人创造的<em>剩余价值</em>，这是资本主义剥削的秘密。资本积累过程中，资本有机构成不断提高，形成相对过剩人口，加剧社会两极分化。</p>
+      </div>
+      <div class="pr"><span class="pr-idx">11</span>
+        <h3 class="pr-tt serif">资本主义基本矛盾与"两个必然"</h3>
+        <p class="pr-tx">生产社会化与生产资料资本主义私人占有之间的矛盾，是资本主义的基本矛盾，其集中表现是周期性经济危机。资本主义发展呈现<em>社会主义必然代替资本主义</em>的历史趋势（"两个必然"），同时这一过程的实现需要成熟的客观条件（"两个决不会"）。共产主义的实现是历史发展的必然，其目标是实现人的自由而全面的发展。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 肆 · 中国化时代化 ================= -->
+<section id="sec4">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">04</span>
+      <h2 class="sec-cn serif">马克思主义中国化时代化</h2>
+      <span class="sec-en">Sinicization and Modernization</span>
+      <div class="sec-line"></div>
+      <p class="sec-desc">马克思主义只有同本国具体实际、同中华优秀传统文化相结合，才能焕发强大生命力。中国共产党把马克思主义基本原理与中国国情相结合，实现了理论创新的不断飞跃。</p>
+    </div>
+
+    <div class="split rv">
+      <div class="split-txt">
+        <ul class="plist">
+          <li><b>毛泽东思想</b>——马克思主义中国化的第一次历史性飞跃，指引中国革命取得胜利。</li>
+          <li><b>邓小平理论</b>——回答"什么是社会主义、怎样建设社会主义"，开创改革开放新局面。</li>
+          <li><b>"三个代表"重要思想、科学发展观</b>——推进中国特色社会主义理论体系的丰富与发展。</li>
+          <li><b>习近平新时代中国特色社会主义思想</b>——当代中国马克思主义、二十一世纪马克思主义，是全党全国人民为实现中华民族伟大复兴而奋斗的行动指南。</li>
+        </ul>
+        <div class="chips">
+          <span class="chip">两个结合</span><span class="chip">实事求是</span><span class="chip">理论创新永无止境</span>
+        </div>
+      </div>
+      <div class="split-img">
+        <div class="frame">
+          <img src="images/china-sunrise.jpg" data-fb="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=%E6%97%A5%E5%87%BA%E6%97%B6%E5%88%86%E7%9A%84%E7%8E%B0%E4%BB%A3%E5%8C%96%E4%B8%AD%E5%9B%BD%E5%9F%8E%E5%B8%82%E5%A4%A9%E9%99%85%E7%BA%BF%EF%BC%8C%E9%87%91%E8%89%B2%E6%9C%9D%E9%9C%9E%E4%B8%8E%E7%BA%A2%E8%89%B2%E4%B8%9D%E5%B8%A6%E7%8A%B6%E6%97%97%E5%B8%9C%EF%BC%8C%E5%B9%BF%E9%98%94%E5%89%8D%E9%99%AF%EF%BC%8C%E5%8F%B2%E8%AF%97%E6%84%9F%EF%BC%8C%E6%97%A0%E6%96%87%E5%AD%97&image_size=landscape_4_3" alt="中国现代化城市日出" onerror="this.getAttribute('data-done')?this.style.display='none':(this.setAttribute('data-done','1'),this.src=this.getAttribute('data-fb'))">
+          <span class="frame-tag">理论创新永无止境 · 实践发展永无止境</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 伍 · 名句墙 ================= -->
+<section id="sec5" style="padding-top:20px;">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="sec-num">05</span>
+      <h2 class="sec-cn serif">经典名言 · 思想的回响</h2>
+      <span class="sec-en">Classic Quotations</span>
+      <div class="sec-line"></div>
+    </div>
+    <div class="quotes rv">
+      <div class="q"><div class="q-in"><span class="q-mark">&rdquo;</span>
+        <p class="q-tx serif">哲学家们只是用不同的方式解释世界，而问题在于改变世界。</p>
+        <span class="q-src">—— 马克思《关于费尔巴哈的提纲》</span></div></div>
+      <div class="q"><div class="q-in"><span class="q-mark">&rdquo;</span>
+        <p class="q-tx serif">实践是检验真理的唯一标准。</p>
+        <span class="q-src">—— 马克思主义认识论的基本观点</span></div></div>
+      <div class="q"><div class="q-in"><span class="q-mark">&rdquo;</span>
+        <p class="q-tx serif">理论只要彻底，就能说服人。所谓彻底，就是抓住事物的根本。</p>
+        <span class="q-src">—— 马克思《〈黑格尔法哲学批判〉导言》</span></div></div>
+      <div class="q"><div class="q-in"><span class="q-mark">&rdquo;</span>
+        <p class="q-tx serif">没有革命的理论，就不会有革命的运动。</p>
+        <span class="q-src">—— 列宁《怎么办？》</span></div></div>
+    </div>
+
+    <div class="closing rv">
+      <h3 class="serif">让马克思主义的真理之光，照亮前行的路</h3>
+      <p>学习马克思主义基本原理，根本目的在于<strong>掌握科学的世界观和方法论</strong>：坚持从实际出发、实事求是，坚持用联系和发展的观点看问题，
+      坚持在实践中检验和发展真理，把个人的成长融入民族复兴的时代洪流，做新时代坚定的马克思主义学习者、信仰者和实践者。</p>
+      <div class="big-seal kai">真理<br>之光</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>马克思主义基本原理</b> · 单页宣传网页　|　内容依据马克思主义理论研究和建设工程相关教材整理</p>
+    <p style="margin-top:8px;">本页为学习宣传用途，兼容 Chrome / Edge / Firefox / Safari / Opera 等主流浏览器</p>
+  </div>
+</footer>
+
+<div id="toTop" title="回到顶部">↑</div>
+
+<script>
+(function () {
+  "use strict";
+  var doc = document;
+
+  /* ---------- 1. 兼容性降级：不支持的能力直接跳过，保证内容可读 ---------- */
+  var hasIO = typeof window.IntersectionObserver === "function";
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var rvEls = doc.querySelectorAll ? doc.querySelectorAll(".rv") : [];
+
+  function showAll() {
+    for (var i = 0; i < rvEls.length; i++) { rvEls[i].className += " on"; }
+  }
+
+  if (!hasIO || reduceMotion) {
+    if (doc.body.className.indexOf("no-anim") < 0) { doc.body.className += " no-anim"; }
+    showAll();
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      for (var i = 0; i < entries.length; i++) {
+        if (entries[i].isIntersecting) {
+          var el = entries[i].target;
+          if (el.className.indexOf("on") < 0) { el.className += " on"; }
+          io.unobserve(el);
+        }
+      }
+    }, { threshold: 0.12, rootMargin: "0px 0px -60px 0px" });
+    for (var k = 0; k < rvEls.length; k++) { io.observe(rvEls[k]); }
+  }
+
+  /* ---------- 2. 顶部进度条 + 回到顶部 ---------- */
+  var bar = doc.getElementById("progress");
+  var toTop = doc.getElementById("toTop");
+
+  function onScroll() {
+    var st = window.pageYOffset || doc.documentElement.scrollTop || doc.body.scrollTop || 0;
+    var h = doc.documentElement.scrollHeight - window.innerHeight;
+    var p = h > 0 ? (st / h) * 100 : 0;
+    if (bar) { bar.style.width = p + "%"; }
+    if (toTop) {
+      if (st > 520) { toTop.className = "on"; } else { toTop.className = ""; }
+    }
+  }
+  if (window.addEventListener) {
+    window.addEventListener("scroll", onScroll, false);
+  } else if (window.attachEvent) {
+    window.attachEvent("onscroll", onScroll); /* 兼容旧版 IE */
+  }
+  onScroll();
+
+  if (toTop && toTop.addEventListener) {
+    toTop.addEventListener("click", function () {
+      if (window.scrollTo) {
+        try { window.scrollTo({ top: 0, behavior: "smooth" }); }
+        catch (e) { window.scrollTo(0, 0); }
+      }
+    }, false);
+  }
+
+  /* ---------- 3. 数字滚动（首屏下方的数据带） ---------- */
+  function countUp(el) {
+    var raw = el.getAttribute("data-num");
+    if (!raw) { return; }
+    var target = parseFloat(raw), decimals = (raw.split(".")[1] || "").length, t0 = 0, dur = 1400;
+    function step(ts) {
+      if (!t0) { t0 = ts; }
+      var p = Math.min((ts - t0) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.innerHTML = (target * eased).toFixed(decimals) + (el.getAttribute("data-suf") || "");
+      if (p < 1) { window.requestAnimationFrame(step); } else { el.innerHTML = raw + (el.getAttribute("data-suf") || ""); }
+    }
+    if (window.requestAnimationFrame) { window.requestAnimationFrame(step); } else { el.innerHTML = raw + (el.getAttribute("data-suf") || ""); }
+  }
+  var nums = doc.querySelectorAll ? doc.querySelectorAll(".stat-n") : [];
+  var counted = false;
+  function tryCount() {
+    if (counted || !nums.length) { return; }
+    var rect = nums[0].getBoundingClientRect ? nums[0].getBoundingClientRect() : null;
+    if (!rect) { return; }
+    if (rect.top < window.innerHeight - 40) {
+      counted = true;
+      for (var i = 0; i < nums.length; i++) { countUp(nums[i]); }
+    }
+  }
+  if (window.addEventListener) { window.addEventListener("scroll", tryCount, false); }
+  tryCount();
+
+  /* ---------- 4. Canvas 金色微尘粒子（不支持时静默跳过） ---------- */
+  var cv = doc.getElementById("dust");
+  if (cv && cv.getContext && !reduceMotion) {
+    var ctx = cv.getContext("2d"), ps = [], DPR = Math.min(window.devicePixelRatio || 1, 2);
+    function sizeCanvas() {
+      cv.width = window.innerWidth * DPR;
+      cv.height = window.innerHeight * DPR;
+      cv.style.width = window.innerWidth + "px";
+      cv.style.height = window.innerHeight + "px";
+      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+    }
+    function initParticles() {
+      var n = Math.round(window.innerWidth / 26);
+      n = n > 70 ? 70 : n;
+      ps = [];
+      for (var i = 0; i < n; i++) {
+        ps.push({
+          x: Math.random() * window.innerWidth,
+          y: Math.random() * window.innerHeight,
+          r: Math.random() * 1.8 + 0.5,
+          vy: -(Math.random() * 0.28 + 0.08),
+          vx: (Math.random() - 0.5) * 0.24,
+          a: Math.random() * 0.5 + 0.18,
+          ph: Math.random() * Math.PI * 2
+        });
+      }
+    }
+    function draw() {
+      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+      for (var i = 0; i < ps.length; i++) {
+        var p = ps[i];
+        p.y += p.vy; p.x += p.vx; p.ph += 0.02;
+        if (p.y < -12) { p.y = window.innerHeight + 10; p.x = Math.random() * window.innerWidth; }
+        if (p.x < -12) { p.x = window.innerWidth + 10; }
+        if (p.x > window.innerWidth + 12) { p.x = -10; }
+        var al = p.a * (0.65 + 0.35 * Math.sin(p.ph));
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(232,200,112," + al.toFixed(3) + ")";
+        ctx.fill();
+      }
+      window.requestAnimationFrame(draw);
+    }
+    sizeCanvas(); initParticles();
+    if (window.requestAnimationFrame) { window.requestAnimationFrame(draw); }
+    var rt;
+    if (window.addEventListener) {
+      window.addEventListener("resize", function () {
+        if (rt) { clearTimeout(rt); }
+        rt = setTimeout(function () { sizeCanvas(); initParticles(); }, 200);
+      }, false);
+    }
+  }
+
+  /* ---------- 5. 首屏视差 ---------- */
+  var heroCard = doc.querySelector ? doc.querySelector(".hero-card") : null;
+  var ticking = false;
+  if (heroCard && window.requestAnimationFrame && !reduceMotion) {
+    window.addEventListener("scroll", function () {
+      if (ticking) { return; }
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        var st = window.pageYOffset || 0;
+        if (st < 900) {
+          heroCard.style.webkitTransform = "translateY(" + (st * 0.06) + "px)";
+          heroCard.style.transform = "translateY(" + (st * 0.06) + "px)";
+        }
+        ticking = false;
+      });
+    }, false);
+  }
+
+  /* ---------- 6. 走马灯内容复制一份，实现无缝循环 ---------- */
+  var mq = doc.getElementById("mq");
+  if (mq && mq.innerHTML) { mq.innerHTML = mq.innerHTML + mq.innerHTML; }
+})();
+</script>
+</body>
+</html>
